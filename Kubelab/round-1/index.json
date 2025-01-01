@@ -1,15 +1,20 @@
 {
-    "title": "Test-Register",
-    "description": "Test-Register",
+    "title": "Kubelab 1",
+    "description": "Kubelab 1",
     "details": {
       "intro": {
         "title": "Intro",
-        "text": "0-name/text.md",
-        "foreground": "0-name/foreground.sh",
-        "background": "0-name/background.sh",
-        "verify": "0-name/verify.sh"
+        "text": "intro/text.md",
+        "background": "intro/background.sh"
       },
       "steps": [
+        {
+          "title": "Register",
+          "text": "0-name/text.md",
+          "background": "0-name/background.sh",
+          "foreground": "0-name/foreground.sh",
+          "verify": "0-name/verify.sh"
+        },
         {
           "title": "Create Your First Pod",
           "text": "1-create-pod/text.md",
