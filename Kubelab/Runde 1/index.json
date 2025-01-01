@@ -10,7 +10,9 @@
       },
       "steps": [
         {
-          "title": "Step1"
+          "title": "Create Your First Pod",
+          "text": "1-create-pod/text.md",
+          "verify": "1-create-pod/verify.sh"
         }
       ],
       "finish": {
@@ -18,6 +20,6 @@
       }
     },
     "backend": {
-      "imageid": "ubuntu"
+      "imageid": "kubernetes-kubeadm-1node"
     }
   }

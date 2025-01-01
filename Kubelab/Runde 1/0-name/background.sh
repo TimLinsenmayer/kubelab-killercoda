@@ -7,6 +7,7 @@ ROUND_ID=1  # Set this to your round ID
 # Create directories
 mkdir -p /root/.kubelab
 mkdir -p /tmp/kubelab
+mkdir -p /usr/local/bin/kubelab
 
 # Generate the interactive script
 cat > /tmp/kubelab/prompt.sh << 'EOF'
@@ -58,6 +59,56 @@ while true; do
   done
 done
 EOF
+
+# Create the task completion script
+cat > /usr/local/bin/kubelab/complete-task << 'EOF'
+#!/bin/bash
+
+# Check if task ID is provided
+if [ -z "$1" ]; then
+    echo "Error: Task ID is required"
+    exit 1
+fi
+
+TASK_ID=$1
+PARTICIPANT_ID=$(cat /root/.kubelab/participant_id)
+
+if [ -z "$PARTICIPANT_ID" ]; then
+    echo "Error: No participant ID found. Please register first."
+    exit 1
+fi
+
+# Create temporary files for completion status
+mkdir -p /tmp/kubelab
+COMPLETION_SUCCESS="/tmp/kubelab/completion_success_$TASK_ID"
+COMPLETION_ERROR="/tmp/kubelab/completion_error_$TASK_ID"
+
+# Call the completion API
+response=$(curl -s -X POST "https://kubelab.vercel.app/api/complete" \
+    -H "Content-Type: application/json" \
+    -d "{\"participantId\": $PARTICIPANT_ID, \"taskId\": $TASK_ID}")
+
+if echo "$response" | grep -q "pointsGranted"; then
+    points=$(echo "$response" | grep -o '"pointsGranted":[0-9]*' | cut -d':' -f2)
+    position=$(echo "$response" | grep -o '"position":[0-9]*' | cut -d':' -f2)
+    echo "🎉 Task completed successfully!"
+    echo "Points awarded: $points"
+    echo "Completion position: $position"
+    touch "$COMPLETION_SUCCESS"
+    exit 0
+else
+    error_msg=$(echo "$response" | grep -o '"error":"[^"]*"' | cut -d'"' -f4)
+    if [ -z "$error_msg" ]; then
+        error_msg="Unknown error occurred"
+    fi
+    echo "❌ Error completing task: $error_msg"
+    echo "$error_msg" > "$COMPLETION_ERROR"
+    exit 1
+fi
+EOF
+
+# Make the completion script executable
+chmod +x /usr/local/bin/kubelab/complete-task
 
 # Function to register participant
 register_participant() {
