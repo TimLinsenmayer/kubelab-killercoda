@@ -1,0 +1,23 @@
+{
+    "title": "Test-Register",
+    "description": "Test-Register",
+    "details": {
+      "intro": {
+        "title": "Intro",
+        "text": "0-name/text.md",
+        "foreground": "0-name/foreground.sh",
+        "background": "0-name/background.sh"
+      },
+      "steps": [
+        {
+          "title": "Step1"
+        }
+      ],
+      "finish": {
+        "title": "Finish"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }
