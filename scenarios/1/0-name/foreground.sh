@@ -3,3 +3,5 @@ while [ ! -f /tmp/kubelab/prompt.sh ]; do
 done
 
 source /tmp/kubelab/prompt.sh 
+
+echo "Please press START on the left to continue."
