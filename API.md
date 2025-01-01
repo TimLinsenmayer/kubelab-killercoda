@@ -5,7 +5,8 @@ This document describes the endpoints available in the KubeLab API for tracking 
 ## Base URL
 
 ```
-https://kubelab.vercel.app
+https://kubelab.tim.it.com/
+https://dhbw-kubernetes.azurewebsites.net/
 ```
 
 ## Endpoints

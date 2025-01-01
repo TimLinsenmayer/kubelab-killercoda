@@ -78,7 +78,7 @@ COMPLETION_SUCCESS="/tmp/kubelab/completion_success_$TASK_ID"
 COMPLETION_ERROR="/tmp/kubelab/completion_error_$TASK_ID"
 
 # Call the completion API
-response=$(curl -s -X POST "https://kubelab.vercel.app/api/complete" \
+response=$(curl -s -X POST "https://kubelab.tim.it.com/api/complete" \
     -H "Content-Type: application/json" \
     -d "{\"participantId\": $PARTICIPANT_ID, \"taskId\": $TASK_ID}")
 

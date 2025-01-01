@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-API_URL="https://kubelab.vercel.app"
+API_URL="https://kubelab.tim.it.com"
 ROUND_ID=1  # Set this to your round ID
 
 # Function to register participant
