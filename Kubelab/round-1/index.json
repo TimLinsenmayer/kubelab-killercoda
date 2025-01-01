@@ -18,6 +18,7 @@
         {
           "title": "Create Your First Pod",
           "text": "1-create-pod/text.md",
+          "foreground": "1-create-pod/foreground.sh",
           "verify": "1-create-pod/verify.sh"
         }
       ],
