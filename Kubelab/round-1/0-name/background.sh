@@ -113,12 +113,13 @@ chmod +x /usr/local/bin/kubelab/complete-task
 # Function to register participant
 register_participant() {
   local name="$1"
+  local escaped_name=$(echo "$name" | sed 's/["\]/\\&/g')
   local response
   
   # Call the registration API
   response=$(curl -s -X POST "$API_URL/api/register" \
     -H "Content-Type: application/json" \
-    -d "{\"name\": \"$name\", \"roundId\": $ROUND_ID}")
+    -d "{\"name\": \"$escaped_name\", \"roundId\": $ROUND_ID}")
   
   # Check if the response contains participantId
   if echo "$response" | grep -q "participantId"; then
