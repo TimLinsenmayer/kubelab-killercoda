@@ -35,6 +35,13 @@
           "title": "Intermezzo",
           "text": "4-intermezzo/text.md",
           "verify": "4-intermezzo/verify.sh"
+        },
+        {
+          "title": "Skalieren mit Deployment",
+          "background": "5-deployment/background.sh",
+          "foreground": "5-deployment/foreground.sh",
+          "text": "5-deployment/text.md",
+          "verify": "5-deployment/verify.sh"
         }
       ],
       "finish": {
