@@ -30,6 +30,11 @@
           "title": "Service erstellen",
           "text": "3-access-ports/text.md",
           "verify": "3-access-ports/verify.sh"
+        },
+        {
+          "title": "Intermezzo",
+          "text": "4-intermezzo/text.md",
+          "verify": "4-intermezzo/verify.sh"
         }
       ],
       "finish": {

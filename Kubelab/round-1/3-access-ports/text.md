@@ -25,11 +25,11 @@ spec:
 ```
 
 Zuvor müssen wir aber den "alten" Pod löschen: `kubectl delete pod kubelab-pod`{{exec}}.
-Erst dann können wir den neuen Pod erstellen: `kubectl apply -f pod.yaml`. 
+Erst dann können wir den neuen Pod erstellen: `kubectl apply -f pod.yaml`{{exec}}. 
 
 Aber selbst dann können wir den Pod nicht von außen erreichen ([klick mich!]({{TRAFFIC_HOST1_3000}})). Dazu müssen wir einen Service erstellen.
 
-Wir erstellen also einen Service, der den Pod auf Port 3000 exponiert. Dazu erstellen wir eine neue YAML-Datei (z.B. `service.yaml`) und fügen folgendes ein:
+Wir erstellen also einen Service, der den Pod auf Port 30000 exponiert. Dazu erstellen wir eine neue YAML-Datei (z.B. `service.yaml`) und fügen folgendes ein:
 
 ```yaml
 apiVersion: v1
@@ -47,5 +47,5 @@ spec:
       nodePort: 30000
 ```
 
-Wir erstellen den Service mit `kubectl apply -f service.yaml`.
+Wir erstellen den Service mit `kubectl apply -f service.yaml`{{exec}}.
 Jetzt können wir den Service auch "öffentlich" erreichen: [klick mich!]({{TRAFFIC_HOST1_30000}})
