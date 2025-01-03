@@ -25,6 +25,11 @@
           "title": "Pod untersuchen",
           "text": "2-pod-inspection/text.md",
           "verify": "2-pod-inspection/verify.sh"
+        },
+        {
+          "title": "Service erstellen",
+          "text": "3-access-ports/text.md",
+          "verify": "3-access-ports/verify.sh"
         }
       ],
       "finish": {
