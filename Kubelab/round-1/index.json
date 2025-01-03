@@ -42,6 +42,12 @@
           "foreground": "5-deployment/foreground.sh",
           "text": "5-deployment/text.md",
           "verify": "5-deployment/verify.sh"
+        },
+        {
+          "title": "☢️ Nuke",
+          "text": "6-nuke/text.md",
+          "foreground": "6-nuke/foreground.sh",
+          "verify": "6-nuke/verify.sh"
         }
       ],
       "finish": {

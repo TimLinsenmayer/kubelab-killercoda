@@ -7,4 +7,4 @@ In der ersten Runde werden wir uns mit den Grundlagen von Kubernetes beschäftig
 
 > Für diese Runde sind **45 Minuten** vorgesehen. Diese Umgebung wird maximal 60 Minuten lang bereitgestellt.
 
-Sobald unten rechts "Start" erscheint, kannst du loslegen!
+Sobald unten rechts "Start" erscheint und in der Konsole "controlplane" erscheint, kannst du loslegen!

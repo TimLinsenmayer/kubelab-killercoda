@@ -18,6 +18,8 @@ Aha, wir brauchen also mehrere Instanzen der App. Und idealerweise sollten wir n
   </ul>
 </div>
 
+Im Hintergrund haben wir dir `invalid-pod` und `kubelab-pod` gelöscht, damit dein Deployment nicht fehlschlägt.
+
 <details>
   <summary>Hilfe/Hinweise</summary>
 
