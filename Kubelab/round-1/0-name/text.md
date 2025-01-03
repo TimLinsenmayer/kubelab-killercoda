@@ -1,12 +1,12 @@
-# Welcome to KubeLab! 🎯
+# Willkommen im Kubelab! 🎯
 
-Before we begin with the Kubernetes challenges, we need to register you as a participant.
+Bevor wir mit den Kubernetes-Challenges beginnen, müssen wir dich als Teilnehmer registrieren.
 
-Please enter your name when prompted. This will be used to track your progress on the leaderboard.
+Bitte gib deinen Namen ein. Dies wird verwendet, um deinen Fortschritt auf der Leaderboard zu verfolgen.
 
-Requirements for the name:
-- At least 2 characters long
-- Can include spaces
-- Should be a name you can recognize on the leaderboard
+Anforderungen für den Namen:
+- Mindestens 2 Zeichen lang
+- Kann Leerzeichen enthalten
+- Soll ein Name sein, den du auf der Leaderboard erkennen kannst
 
-Once you're registered successfully, you can proceed to the next step.
+Sobald du erfolgreich registriert hast, kannst du zum nächsten Schritt übergehen.
