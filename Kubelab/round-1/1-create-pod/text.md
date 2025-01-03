@@ -22,7 +22,7 @@ Zunächst erstellen wir einen Pod, den wir später benötigen.
 
 Den Status von Pods kannst du mit `kubectl get pods`{{exec}} überprüfen.
 
-Sobald du den Pod erstellt hast, kannst du mit "CHECK" überprüfen, ob du die Aufgabe erfolgreich erledigt hast.
+Sobald du den Pod erstellt hast, kannst du mit "CHECK" überprüfen, ob du die Aufgabe erfolgreich erledigt hast. Da das Container-Image erst noch heruntergeladen werden muss, kann es einige Sekunden dauern, bis der Pod gestartet ist.
 
 <details>
   <summary>Hilfe/Hinweise</summary>

@@ -9,17 +9,22 @@
       },
       "steps": [
         {
-          "title": "Register",
+          "title": "Registrieren",
           "text": "0-name/text.md",
           "background": "0-name/background.sh",
           "foreground": "0-name/foreground.sh",
           "verify": "0-name/verify.sh"
         },
         {
-          "title": "Create Your First Pod",
+          "title": "Pod erstellen",
           "text": "1-create-pod/text.md",
           "foreground": "1-create-pod/foreground.sh",
           "verify": "1-create-pod/verify.sh"
+        },
+        {
+          "title": "Pod untersuchen",
+          "text": "2-pod-inspection/text.md",
+          "verify": "2-pod-inspection/verify.sh"
         }
       ],
       "finish": {
